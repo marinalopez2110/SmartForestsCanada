@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Edit <%= researchSite.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/researchSites/<%= researchSite._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input class="form-control" id="name" type="text" name="researchSite[name]" value="<%= researchSite.name %>">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input class="form-control" id="image" type="text" name="researchSite[image]" value="<%= researchSite.image %>">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input class="form-control" id="description" type="text" name="researchSite[description]" value="<%= researchSite.description %>">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input class="form-control" type="text" name="location" id="location" value="<%= researchSite.location %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/researchSites">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

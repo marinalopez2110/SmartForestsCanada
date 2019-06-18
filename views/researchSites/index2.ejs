@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="container">
+
+<header class="jumbotron"">
+   <div class="container">
+        <h1><span class="glyphicon glyphicon-tree-deciduous"></span>
+        SmartForests Canada <span class="glyphicon glyphicon-tree-conifer"></span></h1>
+        <p>Explore our Research Sites and Projects in Quebec</p>
+        <!--<p>-->
+        <!--    <a class="btn btn-primary btn-lg" href="/researchSites/new"> Add New Research Site or Project</a>-->
+        <!--</p>-->
+        </div>
+</header>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% researchSites.forEach(function(researchSite){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= researchSite.image %>">
+                    <div class = "caption">
+                        <h4> <%= researchSite.name %></h4>
+                    </div>
+                </div>
+                <p>
+                    <a href="/researchSites/<%= researchSite._id %>" class="btn btn-primary">More Info</a>
+                </p>
+                </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
