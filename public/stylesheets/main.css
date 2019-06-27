@@ -15,12 +15,13 @@
 }
 
 .header_smart {
- background: url("LogoSmartForestsCanada.png");
+ background: url("SmartForest logo black.png");
  background-color: #cccccc;
  border: 2px solid black;
   padding: 25px;
   background-repeat: no-repeat;
- background-size: 200px 70px;
+ background-size: 150px 70px;
+    background-position: center top;
  text-align: center;
  
  

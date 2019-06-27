@@ -46,5 +46,5 @@ app.use("/researchSites", researchSiteRoutes);
 app.use("/researchSites/:id/comments", commentRoutes);
 
 app.listen(80, '206.167.88.175', function(){
-    console.log("The YelpCamp Server Has Started!");
+    console.log("The SmartForests Server Has Started!");
 });
