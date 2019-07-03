@@ -14,68 +14,53 @@
             </div>
         </div>
         <div class="col-md-9">
-            <h1><a><%= researchSite.name%></a></h1>
+            <h1><a><%= researchSite.name%> - Projects </a></h1>
             <div class="thumbnail">
-                <img class="img=responsive" src= "<%= researchSite.image %>">
                 <div class="caption full">
-                    <h4 class="pull-right">81km from Montreal</h4>
+                    <h4 class="pull-right"></h4>
                     <p>  </p>
                     <p><%= researchSite.description %> </p>
+                    <br>
+                    <h2 style="text-align:center"><a> PROJECTS</a> </h2>
                 </div>
             </div>
+
             <div class="well">
-                <div class="text-right">
-                    <a class="btn btn-success" href="/researchSites/<%= researchSite._id %>/comments/new"> Add New Comment</a>
-                </div>
-                <hr>
-                <% researchSite.comments.forEach(function(comment){ %>
-                    <div class="row">
+                 <div class="row">
+                    <h3> <a><%= researchSite.titlep1 %> </a></h3>
                         <div class="col-md-12">
-                            <strong> <%= comment.author %></strong> 
-                            <span class="pull-right">10 days ago</span>
-                            <p> <%= comment.text %> </p>
+                            <p> <%= researchSite.descriptionp1 %> </p>
+                            <strong> Team members </strong>
+                            <span class="pull-right"><strong>Status:</strong> <%= researchSite.statusp1 %> </span>
+                            <p> <%= researchSite.researcherp1 %> </p>
+                            <p> <strong> Data: </strong> <%= researchSite.datap1%>
+                            <span class="pull-right"><strong>Last update:</strong> July 2019</span> </p>
                         </div>
                         <div>
-                            <a href="https://plot.ly/~marinalopez2110/18/?share_key=nuTZJgZIXAWQeRiHDtmIhB" target="_blank" title="plot from API (9)" style="display: block; text-align: center;"><img src="https://plot.ly/~marinalopez2110/18.png?share_key=nuTZJgZIXAWQeRiHDtmIhB" alt="plot from API (9)" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-                            <script data-plotly="marinalopez2110:18" sharekey-plotly="nuTZJgZIXAWQeRiHDtmIhB" src="https://plot.ly/embed.js" async></script>
+                            <a href="<%= researchSite.refdatavisp1 %>" target="_blank" style="display: block; text-align: center;"><img src="<%= researchSite.datavisp1 %>" style="max-width: 100%;width: 600px;"  onerror="this.onerror=null;this.src='<%= researchSite.onerrorp1 %>';" /></a>
+                            <script data-plotly="marinalopez2110:18" sharekey-plotly="nuTZJgZIXAWQeRiHDtmIhB" src="<%= researchSite.scriptp1 %>" async></script>
                         </div>
+                  </div>
+             </div>
 
+            <div class="well">
+                <div class="row">
+                    <h3> <a><%= researchSite.titlep2 %> </a></h3>
+                    <div class="col-md-12">
+                        <p> <%= researchSite.descriptionp2 %> </p>
+                        <strong> Team members </strong>
+                        <span class="pull-right"><strong>Status:</strong> <%= researchSite.statusp1 %> </span>
+                        <p> <%= researchSite.researcherp2 %> </p>
+                        <p> <strong> Data: </strong> <%= researchSite.datap2%>
+                            <span class="pull-right"><strong>Last update:</strong> July 2019</span> </p>
                     </div>
-                
-                <% }) %>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<script>
-  function initMap() {
-    var lat = <%= researchSite.lat %>;
-    var lng = <%= researchSite.lng %>;
-    var center = {lat: lat, lng: lng };
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
-        center: center,
-        scrollwheel: false
-    });
-    var contentString = `
-      <strong><%= researchSite.name %><br />
-      <%= researchSite.location %></strong>
-      <p><%= researchSite.description %></p>
-    `
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString
-    });
-    var marker = new google.maps.Marker({
-        position: center,
-        map: map
-    });
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
-  }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCCKIB-nwVPa8ERRHYgkKYf34yf1k9rzo&callback=initMap"></script>
+
 
 <br><br>
 <% include ../partials/footer %>
