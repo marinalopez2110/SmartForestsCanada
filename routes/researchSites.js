@@ -34,14 +34,15 @@ router.post("/", isLoggedIn, function(req, res){
   var researcherp1 = req.body.researcherp1;
   var descriptionp1 = req.body.descriptionp1;
   var statusp1 = req.body.statusp1;
-  var datavisp1 = req.body.datap1;
-  var scriptp1 = req.body.datap1;
-  var onerrorp1 = req.body.datap1;
-  var titlep2 = req.body.titlep1;
-  var researcherp2 = req.body.researcherp1;
-  var descriptionp2 = req.body.descriptionp1;
-  var statusp2 = req.body.statusp1;
-  var datavisp2 = req.body.datap1;
+  var datap1 = req.body.datap1;
+  var datavisp1 = req.body.datavisp1;
+  var scriptp1 = req.body.scriptp1;
+  var onerrorp1 = req.body.onerrorp1;
+  var titlep2 = req.body.titlep2;
+  var researcherp2 = req.body.researcherp2;
+  var descriptionp2 = req.body.descriptionp2;
+  var statusp2 = req.body.statusp2;
+  var datavisp2 = req.body.datavisp2;
 
   var author = {
       id: req.user._id,
@@ -101,6 +102,7 @@ router.post("/", isLoggedIn, function(req, res){
   var descriptionp1 = req.body.descriptionp1;
   var statusp1 = req.body.statusp1;
   var datap1 = req.body.datap1;
+  var datavisp1 = req.body.datavisp1;
   var author = {
       id: req.user._id,
       username: req.user.username
@@ -113,7 +115,7 @@ router.post("/", isLoggedIn, function(req, res){
     var lat = data[0].latitude;
     var lng = data[0].longitude;
     var location = data[0].formattedAddress;
-    var newResearchSite = {name: name, image: image, description: desc, titlep1: titlep1, researcherp1: researcherp1, descriptionp1: descriptionp1, statusp1: statusp1, datap1: datap1, author:author, location: location, lat: lat, lng: lng};
+    var newResearchSite = {name: name, image: image, description: desc, titlep1: titlep1, researcherp1: researcherp1, descriptionp1: descriptionp1, statusp1: statusp1, datap1: datap1, datavisp1 : datavisp1, author:author, location: location, lat: lat, lng: lng};
     // Create a new researchSite and save to DB
     ResearchSite.create(newResearchSite, function(err, newlyCreated){
         if(err){

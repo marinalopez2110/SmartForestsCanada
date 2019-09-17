@@ -32,8 +32,8 @@
                             <p> <%= researchSite.descriptionp1 %> </p>
                             <strong> Team members </strong>
                             <span class="pull-right"><strong>Status:</strong> <%= researchSite.statusp1 %> </span>
-                            <p> <%= researchSite.researcherp1 %> </p>
-                            <p> <strong> Data: </strong> <%= researchSite.datap1%>
+                            <p> <a href="<%= researchSite.bioresearcher1 %>"> <%= researchSite.researcherp1 %> </a>  <a href="<%= researchSite.bioresearcher2 %>"> <%= researchSite.researcher2 %> </a>   </p>
+                            <p> <strong> Data: </strong> <a href="<%= researchSite.datap1%>">Download  Metadata </a>
                             <span class="pull-right"><strong>Last update:</strong> July 2019</span> </p>
                         </div>
                         <div>
@@ -51,7 +51,7 @@
                         <strong> Team members </strong>
                         <span class="pull-right"><strong>Status:</strong> <%= researchSite.statusp1 %> </span>
                         <p> <%= researchSite.researcherp2 %> </p>
-                        <p> <strong> Data: </strong> <%= researchSite.datap2%>
+                        <p> <strong> Data: </strong> <a href="<%= researchSite.datap2%>"> Download Metadata </a>
                             <span class="pull-right"><strong>Last update:</strong> July 2019</span> </p>
                     </div>
                 </div>

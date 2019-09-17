@@ -10,7 +10,7 @@ var data = [
         titlep1: "Soil warming",
         researcherp1: "Alexandre Colin, Nicolas Belanger",
         descriptionp1: "Description in process",
-        datap1: "Link to metadata",
+        datap1: "http://iforet.ca/nextcloud/index.php/s/xgWDeo6wB4NYJJ9",
         statusp1: "In progress",
         refdatavisp1: "https://plot.ly/~marinalopez2110/18/?share_key=nuTZJgZIXAWQeRiHDtmIhB",
         datavisp1: "https://plot.ly/~marinalopez2110/18.png?share_key=nuTZJgZIXAWQeRiHDtmIhB",
@@ -19,7 +19,7 @@ var data = [
         titlep2: "Red Oak",
         researcherp2: "Simon Lebel, Nicolas Belanger",
         descriptionp2: "Description in process",
-        datap2: "Link to metadata",
+        datap2: "http://iforet.ca/nextcloud/index.php/s/xgWDeo6wB4NYJJ9",
         statusp2: "In progress"
     },
         {name: "Abitibi", 
@@ -29,7 +29,7 @@ var data = [
         researcherp1: "Carla Ramos, Nicolas Belanger",
         descriptionp1: "Description in process",
         datavisp1: "https://www.tourisme-abitibi-temiscamingue.org/images/membres/gatr/460/2a8401980eb85ad135a09301c9642a81_960.jpg",
-        datap1: "Link to metadata",
+        datap1: "http://iforet.ca/nextcloud/index.php/s/xgWDeo6wB4NYJJ9",
         statusp1: "In progress"
     },
         {name: "Outaouais", 
@@ -38,7 +38,7 @@ var data = [
         titlep1: "Projets in planning phase",
         researcherp1: "Nicolas Belanger",
         descriptionp1: "Description in process",
-        datap1: "No data available yet",
+        datap1: "http://iforet.ca/nextcloud/index.php/s/xgWDeo6wB4NYJJ9",
         statusp1: "Planning"
     },
 
@@ -48,7 +48,7 @@ var data = [
         titlep1: "Afforestation of the mine",
         researcherp1: "Rim Khlifa, Nicolas Belanger",
         descriptionp1: "description",
-        datap1: "Link to metadata",
+        datap1: "http://iforet.ca/nextcloud/index.php/s/xgWDeo6wB4NYJJ9",
         statusp1: "In progress"
     },
 
@@ -64,7 +64,7 @@ var data = [
             "However, because field studies comparing even and uneven-aged management are limited in their temporal and spatial scale, and because forest ecosystems operate on large temporal and spatial scales, we will try a simulation approach to compare their effect on forest ecosystems at larger scales.\n" +
             "For this, we will use a spatially explicit forest landscape model, called LANDIS-II. We will participate to its development by adding an important element when comparing even and uneven-aged management – forest roads -, and will then simulate different scenarios of forest management to observe how the forest landscape is transformed on several centuries by these different strategies.",
         statusp1: "In progress",
-        datap1: "Link to metadata"
+        datap1: "http://iforet.ca/nextcloud/index.php/s/xgWDeo6wB4NYJJ9"
 
 }]
 function seedDB(){
